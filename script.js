@@ -4,7 +4,6 @@ let colorSelected;
 
 //Adds a row
 function addR(){
-    alert("Clicked Add Row");
     var row = document.createElement("tr");
     var cell = document.createElement("td");
     row.appendChild(cell);
