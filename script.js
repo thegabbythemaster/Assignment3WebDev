@@ -28,6 +28,8 @@ function addC(){
 
 //Removes a row
 function removeR(){
+    var deleteRow = document.getElementsByTagName('tr')[0];
+    deleteRow.remove();
     alert("Clicked Remove Row")
 }
 
