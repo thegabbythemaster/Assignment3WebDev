@@ -28,7 +28,9 @@ function addC(){
 
 //Removes a row
 function removeR(){
-    alert("Clicked Remove Row")
+    var deleteRow = document.getElementsByTagName('tr')[0];
+    deleteRow.remove();
+    //alert("Clicked Remove Row")
 }
 
 //Removes a column
