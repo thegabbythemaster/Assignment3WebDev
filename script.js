@@ -10,11 +10,20 @@ function addR(){
     var element = document.getElementById("grid");
     element.appendChild(row);
     numRows++;
+    //console.log(numRows);
 }
 
 //Adds a column
-function AddC(){
-    alert("Clicked on Add Col")
+function addC(){
+    for(var i = 0; i < numRows; i++){
+        var row = document.getElementsByTagName('tr')[0];
+        var col = document.createElement("td");
+        row.appendChild(col);
+        var div = document.getElementById("grid");
+        div.appendChild(row);
+    }
+    numCols++;
+    //console.log(numCols);
 }
 
 //Removes a row

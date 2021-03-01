@@ -2,7 +2,7 @@ tr, td{
     border: 1px;
     border-style:solid
 }
-td{
+tr, td{
     height: 50px;
     width: 50px;
     background-color: white;
