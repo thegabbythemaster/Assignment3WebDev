@@ -2,8 +2,8 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected;
 
-//Adds a row
-function addR(){
+// Adds a row
+function addRow(){
     var row = document.createElement("tr");
     var cell = document.createElement("td");
     row.appendChild(cell);
@@ -13,8 +13,8 @@ function addR(){
     //console.log(numRows);
 }
 
-//Adds a column
-function addC(){
+// Adds a column
+function addColumn(){
     for(var i = 0; i < numRows; i++){
         var row = document.getElementsByTagName('tr')[0];
         var col = document.createElement("td");
@@ -26,23 +26,39 @@ function addC(){
     //console.log(numCols);
 }
 
-//Removes a row
-function removeR(){
+// Removes a row
+function removeRow(){
     var deleteRow = document.getElementsByTagName('tr')[0];
     deleteRow.remove();
 }
 
-//Removes a column
-function removeC(){
+// Removes a column
+function removeColumn(){
     alert("Clicked Remove Column")
 }
 
-//sets global var for selected color
+// Select a Color
 function selected(){
     colorSelected = document.getElementById("selectedID").value;
     console.log(colorSelected);
 }
 
-function fill(){
+// Fill single cell with currently selected color
+function fillSingle(){
+    alert("Clicked Fill Single Cell")
+}
+
+// Fill all uncolored tiles with currently selected color
+function fillUncolored(){
+    alert("Clicked Fill All Uncolored")
+}
+
+// Fill all uncolored tiles with currently selected color
+function fillAll(){
     alert("Clicked Fill All")
+}
+
+// Fill all uncolored tiles with currently selected color
+function clearAll(){
+    alert("Cleared All")
 }
