@@ -76,7 +76,12 @@ function fillSingle(){
 
 // Fill all uncolored tiles with currently selected color
 function fillUncolored(){
-    alert("Clicked Fill All Uncolored")
+  let cells = document.getElementsByTagName("td")
+  for(let i = 0; i < cells.length; i++){
+    if(!cells[i].style.backgroundColor || cells[i].style.backgroundColor == "white"){
+      cells[i].style.backgroundColor = colorSelected;
+    }
+  }
 }
 
 // Fill all uncolored tiles with currently selected color
