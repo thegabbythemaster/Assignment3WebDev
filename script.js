@@ -5,7 +5,7 @@
 
 let numRows = 0;
 let numCols = 0;
-let colorSelected;
+let colorSelected = "white";
 
 let grid = document.getElementById("grid");
 
@@ -84,7 +84,10 @@ function fillAll(){
     alert("Clicked Fill All")
 }
 
-// Fill all uncolored tiles with currently selected color
+// Clear all color from cells
 function clearAll(){
-    alert("Cleared All")
+    let cells = document.getElementsByTagName("td")
+    for(let i = 0; i < cells.length; i++){
+      cells[i].style.backgroundColor = "white";
+    }
 }
