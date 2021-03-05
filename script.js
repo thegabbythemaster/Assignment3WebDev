@@ -7,7 +7,12 @@ let numRows = 0;
 let numCols = 0;
 let colorSelected = "white";
 
-let grid = document.getElementById("grid");
+const grid = document.getElementById("grid");
+const purple = "#CDB4DB";
+const lightPink = "#FFC8DD";
+const pink = "#FFAFCC";
+const lightBlue = "#BDE0FE";
+const blue = "#A2D2FF";
 
 // Adds a row
 function addRow(){
