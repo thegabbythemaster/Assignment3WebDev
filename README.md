@@ -10,6 +10,6 @@
 - remove columns from the grid (Kristy)
 - select a color from a dropdown menu of colors (Kristy)
 - click on a single cell, changing its color to the currently selected color (Nirmala)
-- fill all uncolored cells with the currently selected color (Nirmala)
-- fill all cells with the currently selected color (Samantha)
+- fill all uncolored cells with the currently selected color (Samantha)
+- fill all cells with the currently selected color (Nirmala)
 - clear all cells/restore all cells to their original/initial color (Samantha)
