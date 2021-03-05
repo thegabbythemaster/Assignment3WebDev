@@ -1,35 +1,61 @@
+// Practical Web Dev
+// Team Foodies - Samantha Ngo, Gabby Gonzalez, Kristy Lau, Nirmala Kuhl
+// Assignment #3
+// 2021-03-04
+
 let numRows = 0;
 let numCols = 0;
 let colorSelected;
 
+let grid = document.getElementById("grid");
+
 // Adds a row
 function addRow(){
-    var row = document.createElement("tr");
-    var cell = document.createElement("td");
-    row.appendChild(cell);
-    var element = document.getElementById("grid");
-    element.appendChild(row);
-    numRows++;
-    //console.log(numRows);
+    let rows = document.getElementsByTagName('tr');
+    if(rows.length == 0){
+      let row = document.createElement("tr");
+      let col = document.createElement("td");
+      row.appendChild(col);
+      grid.appendChild(row);
+      numCols++
+      numRows++
+    } else {
+      let row = document.createElement("tr");
+      for(let i = 0; i < numCols; i++){
+        let cell = document.createElement("td");
+        row.appendChild(cell);
+      }
+      grid.appendChild(row);
+      numRows++;
+      //console.log(numRows);
+    }
 }
 
 // Adds a column
 function addColumn(){
-    for(var i = 0; i < numRows; i++){
-        var row = document.getElementsByTagName('tr')[0];
-        var col = document.createElement("td");
-        row.appendChild(col);
-        var div = document.getElementById("grid");
-        div.appendChild(row);
+    let rows = document.getElementsByTagName('tr');
+    if(rows.length == 0){
+      let row = document.createElement("tr");
+      let col = document.createElement("td");
+      row.appendChild(col);
+      grid.appendChild(row);
+      numCols++
+      numRows++
+    } else {
+      for(let i = 0; i < numRows; i++){
+          let col = document.createElement("td");
+          rows[i].appendChild(col);
+      }
+      numCols++;
+      //console.log(numCols);
     }
-    numCols++;
-    //console.log(numCols);
 }
 
 // Removes a row
 function removeRow(){
-    var deleteRow = document.getElementsByTagName('tr')[0];
+    let deleteRow = document.getElementsByTagName('tr')[0];
     deleteRow.remove();
+    numRows--;
 }
 
 // Removes a column
