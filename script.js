@@ -30,6 +30,8 @@ function addColumn(){
 function removeRow(){
     var deleteRow = document.getElementsByTagName('tr')[0];
     deleteRow.remove();
+
+    numRows--;
 }
 
 // Removes a column
