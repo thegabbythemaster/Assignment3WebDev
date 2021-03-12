@@ -60,17 +60,40 @@ function addColumn(){
 function removeRow(){
     let deleteRow = document.getElementsByTagName('tr')[0];
     deleteRow.remove();
+
     numRows--;
+
+    if(numRows == 0) {
+      numCols = 0;
+    }
 }
 
 // Removes a column
 function removeColumn(){
-    alert("Clicked Remove Column")
+    let rows = document.getElementsByTagName('tr');
+    // console.log(rows)
+
+    for(let i=0; i < numRows; i++){
+      // Access individual row
+      let individualRow = rows[i].children;
+      // console.log("individualRow:", individualRow);
+      // Access last column in that row
+      let lastColumn = individualRow[numCols-1];
+      // Remove last column
+      lastColumn.remove();
+    }
+
+    numCols--;
+    // If the number of columns reach 0
+    // Reset that number of rows to 0 as well
+    if(numCols == 0) {
+      numRows = 0;
+    }
 }
 
 // Select a Color
 function selected(){
-    colorSelected = document.getElementById("selectedID").value;
+    colorSelected = document.getElementById("selectedColor").value;
     console.log(colorSelected);
 }
 
