@@ -112,9 +112,12 @@ function fillUncolored(){
   }
 }
 
-// Fill all uncolored tiles with currently selected color
+// Fill all tiles with currently selected color
 function fillAll(){
-    alert("Clicked Fill All")
+  let cells = document.getElementsByTagName("td")
+  for(let i = 0; i < cells.length; i++){
+      cells[i].style.backgroundColor = colorSelected;
+  }
 }
 
 // Clear all color from cells
