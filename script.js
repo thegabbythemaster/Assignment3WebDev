@@ -98,9 +98,12 @@ function selected(){
 }
 
 // Fill single cell with currently selected color
-function fillSingle(){
-    alert("Clicked Fill Single Cell")
-}
+let table = document.getElementById('grid');
+table.onclick = function(event) {
+	let target = event.target.closest('td');
+	console.log(target)
+	target.style.backgroundColor = colorSelected
+};
 
 // Fill all uncolored tiles with currently selected color
 function fillUncolored(){
